@@ -1,0 +1,21 @@
+#?? ?? ??
+server:
+  port: 8082
+
+#database ?? ??
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_condingrecipe?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: min
+    password: 1234
+  thymeleaf:
+    cache: false
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    show-sql : true
+    hibernate:
+      ddl-auto: update
+      #이 부분이 sql문을 생성해줌! 처음 create -> update
